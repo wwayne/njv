@@ -4,7 +4,23 @@ Node.js jsonapi validator middleware
 [![Version](http://img.shields.io/npm/v/jsonapi-validator.svg)](https://www.npmjs.org/package/jsonapi-validator)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
+## Install
+```
+npm install jsonapi-validator
+```
 ## Usage
+In Loopback
+
+```
+middleware.json
+
+"auth": {
+  "jsonapi-verify": {
+    "enable": true
+  }
+},
+```
+
 
 ## License
 
