@@ -1,12 +1,12 @@
-# jsonapi-validator
+# njv
 Node.js jsonapi validator middleware
 
-[![Version](http://img.shields.io/npm/v/jsonapi-validator.svg)](https://www.npmjs.org/package/jsonapi-validator)
+[![Version](http://img.shields.io/npm/v/njv.svg)](https://www.npmjs.org/package/njv)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 ## Install
 ```
-npm install jsonapi-validator
+npm install njv
 ```
 ## Usage
 In Loopback
@@ -15,7 +15,7 @@ In Loopback
 middleware.json
 
 "auth": {
-  "jsonapi-verify": {
+  "njv": {
     "enable": true
   }
 },

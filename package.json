@@ -1,7 +1,7 @@
 {
-  "name": "jsonapi-validator",
-  "version": "1.0.1",
-  "description": "jsonapi validator for node.js",
+  "name": "njv",
+  "version": "1.0.0",
+  "description": "jsonapi validator middleware for node.js",
   "main": "index.js",
   "dependencies": {
     "build-http-error": "^0.2.1"
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wwayne/jsonapi-validator.git"
+    "url": "git+https://github.com/wwayne/njv.git"
   },
   "keywords": [
     "jsonapi",
@@ -31,7 +31,7 @@
   "author": "wwayne",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wwayne/jsonapi-validator/issues"
+    "url": "https://github.com/wwayne/njv/issues"
   },
-  "homepage": "https://github.com/wwayne/jsonapi-validator#readme"
+  "homepage": "https://github.com/wwayne/njv#readme"
 }
