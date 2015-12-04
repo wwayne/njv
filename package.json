@@ -1,0 +1,37 @@
+{
+  "name": "jsonapi-validator",
+  "version": "1.0.0",
+  "description": "jsonapi validator for node.js",
+  "main": "index.js",
+  "dependencies": {
+    "build-http-error": "^0.2.1"
+  },
+  "devDependencies": {
+    "babel": "^5.8.34",
+    "chai": "^3.4.1",
+    "mocha": "^2.3.4",
+    "should": "^7.1.1",
+    "standard": "^5.4.1"
+  },
+  "scripts": {
+    "check": "standard ./lib/jsonValidator.js",
+    "test": "npm run check && mocha ./test/validator.test.js",
+    "build": "npm run check && babel ./lib/jsonValidator.js > ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wwayne/jsonapi-validator.git"
+  },
+  "keywords": [
+    "jsonapi",
+    "middleware",
+    "node",
+    "nodejs"
+  ],
+  "author": "wwayne",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wwayne/jsonapi-validator/issues"
+  },
+  "homepage": "https://github.com/wwayne/jsonapi-validator#readme"
+}
