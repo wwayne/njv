@@ -27,16 +27,10 @@ var jsonValidator = function jsonValidator() {
     var resAccept = req.get('accept');
     var resAcceptRange = resAccept ? resAccept.split(',') : [];
 
-    /**
-     * when request body exist
-     * Judge conten-type
-     */
-    if (req.body) {
-      if (! ~resContentTypes.indexOf('application/vnd.api+json')) {
-        return next((0, _buildHttpError2['default'])(415));
-      } else if (resContentTypes.split(';').length > 1) {
-        return next((0, _buildHttpError2['default'])(415));
-      }
+    /* When body has data, need to validate content type */
+    var contentLength = req.headers['content-length'];
+    if (contentLength > 0 && resContentTypes !== 'application/vnd.api+json') {
+      return next((0, _buildHttpError2['default'])(415));
     }
 
     /* Check client Accept, if it contains JSON APIs and

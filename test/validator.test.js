@@ -33,7 +33,8 @@ describe('Middleware jsonapi', () => {
   it('should return 415 when Content-Type is wrong', done => {
     const req = new Request({
       header: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'Content-Length': 15
       },
       body: {
         data: 'test'
@@ -49,7 +50,8 @@ describe('Middleware jsonapi', () => {
   it('should return 415 when Content-Type has more than 2 types', done => {
     const req = new Request({
       header: {
-        'Content-Type': 'application/vnd.api+json; html/text'
+        'Content-Type': 'application/vnd.api+json; html/text',
+        'Content-Length': 15
       },
       body: {
         data: 'test'
