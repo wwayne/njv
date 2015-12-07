@@ -27,16 +27,22 @@ var jsonValidator = function jsonValidator() {
     var resAccept = req.get('accept');
     var resAcceptRange = resAccept ? resAccept.split(',') : [];
 
-    if (! ~resContentTypes.indexOf('application/vnd.api+json')) {
-      return next((0, _buildHttpError2['default'])(415));
-    } else if (resContentTypes.split(';').length > 1) {
-      return next((0, _buildHttpError2['default'])(415));
+    /**
+     * when request body exist
+     * Judge conten-type
+     */
+    if (req.body) {
+      if (! ~resContentTypes.indexOf('application/vnd.api+json')) {
+        return next((0, _buildHttpError2['default'])(415));
+      } else if (resContentTypes.split(';').length > 1) {
+        return next((0, _buildHttpError2['default'])(415));
+      }
     }
 
     /* Check client Accept, if it contains JSON APIs and
      * all of these JSON APIs contain Media params, return 406
      */
-    var regExp = /^\W*application\/vnd\.api\+json$/i;
+    var regExp = /^\s*application\/vnd\.api\+json$/i;
     var isAcceptable = true;
     var eachMediaArray = [];
 
