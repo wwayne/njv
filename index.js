@@ -12,7 +12,7 @@ Object.defineProperty(exports, '__esModule', {
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-var _buildHttpError = require('build-http-error');
+var _buildHttpError = require('http-errors');
 
 var _buildHttpError2 = _interopRequireDefault(_buildHttpError);
 

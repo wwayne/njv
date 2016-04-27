@@ -4,7 +4,7 @@
   "description": "jsonapi validator middleware for node.js",
   "main": "index.js",
   "dependencies": {
-    "build-http-error": "^0.2.1"
+    "http-errors": "^1.4.0"
   },
   "devDependencies": {
     "babel": "^5.8.34",
